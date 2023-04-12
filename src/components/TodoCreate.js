@@ -3,41 +3,42 @@ import styled, { css } from 'styled-components';
 import { MdAdd } from 'react-icons/md';
 import { useTodoDispatch, useTodoNextId } from '../TodoContext';
 
-const CircleButton = styled.button`
-  background: #38d9a9;
+const CircleButton = styled.button` // 추가 버튼
+  background: transparent;
   &:hover {
-    background: #63e6be;
+    background: transparent;
   }
   &:active {
-    background: #20c997;
+    background: transparent;
   }
 
   z-index: 5;
   cursor: pointer;
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
   align-items: center;
   justify-content: center;
-  font-size: 60px;
+  font-size: 20px;
   position: absolute;
-  left: 50%;
-  bottom: 0px;
+  left: 93%;
+  bottom: 96.5%;
   transform: translate(-50%, 50%);
-  color: white;
-  border-radius: 50%;
+  color: black;
+  // border-radius: 100%;
   border: none;
   outline: none;
+  
 
   transition: 0.125s all ease-in;
   ${props =>
     props.open &&
     css`
-      background: #ff6b6b;
+      background: transparent;
       &:hover {
-        background: #ff8787;
+        background: transparent;
       }
       &:active {
-        background: #fa5252;
+        background: transparent;
       }
       transform: translate(-50%, 50%) rotate(45deg);
     `}
